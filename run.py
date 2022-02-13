@@ -1,3 +1,5 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+import random 
+
+wordlist = [ foxglove ,frazzled ,frizzled , blitz , blizzard , boggle , stretch , stronghold ,stymied ,zigzagging , zilch , zipper , zodiac ,zombie , equip , cycle ,jinx ,larynx , vixen]
+
+word = random.choice(wordlist).lower()
