@@ -1,18 +1,24 @@
 import random
-def thehangman():
+def get_valid_word(words):
+    word = random.choice(words)  
+    words = [ 'apple' , 'apricots' , 'avocado' ,'banana' , 'blackberries' ,'blackcurrant' ,'blueberries']
+    while '-' in word or ' ' in word:
+        word = random.choice(words)
 
-word_list = [ 'apple' , 'apricots' , 'avocado' ,'banana' , 'blackberries' ,'blackcurrant' ,'blueberries']
+    return word.upper()
 
-word = random.choice(word_list)
+def Hangman():
+    word = get_valid_word(words)
+    word_letters = set(word) 
+    alphabet = set(string.ascii_upperacse)
+    used_letters = set()
 
 turns = 10
 guessmade = ''
-valid_entry = set('abcdefghijklmnopqrstuvwxyz')
+abcdefghijklmnopqrstuvwxyz
 
 while len(word)>0:
-    main_word = ""
-    missed = 0
-    
+    main_word = "" 
     
     for letter in word:
         if letter in guessmade:
@@ -25,18 +31,18 @@ while len(word)>0:
             print("well done you have won! ;)")
             break
 
-    print("guess the word", main_word)
+    print("Guess The Furit", main_word)
     guess = input()
 
     if guess in valid_entry:
         guessmade = guessmade+guess
-
+        
     else:
             print("enter the right character")
             guess = input()
 
-if guess not in the word:
-    turns = turns -0
+if guess not in word:
+turns = turns -1
 
 if turns == 10:
     Print("You have ten turns left")
@@ -104,6 +110,12 @@ if turns == 1:
 if turns == 0:
     Print("You have lost!!!")
     Print(" try you luck next time")
+    Print("----------")
+    Print("     O__|   ")
+    Print("    /|\   ")
+    Print("    / \  ")
+    
+    
 
 Name = input("enter your name here ")
 print("Welcome",name, "To The Hangman Game fruit Guessing Game ")
