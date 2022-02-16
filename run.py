@@ -12,6 +12,13 @@ valid_entry = set('abcdefghijklmnopqrstuvwxyz')
 while len(word)>0:
     main_word = ""
     missed = 0
+    
+    
+    for letter in word:
+        if letter in guessmade:
+            main_word = main_word+letter
+    else:
+        main_word=main_word+"_"
 
     print("guess the word", main_word)
     guess = input()
