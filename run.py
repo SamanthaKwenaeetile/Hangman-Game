@@ -1,8 +1,9 @@
 import random
 def thehangman():
 
-words = [ 'apple' , 'apricots' , 'avocado' ,'banana' , 'blackberries' ,'blackcurrant' ,'blueberries']
+words_list = [ 'apple' , 'apricots' , 'avocado' ,'banana' , 'blackberries' ,'blackcurrant' ,'blueberries']
 
+word = random.choice(words_list)
 Name = input("enter your name here ")
 print("Welcome",name, "To The Hangman Game")
 print("------------------")
